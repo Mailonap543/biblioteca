@@ -43,5 +43,4 @@ public double getSalario (){
 public void setSalario(){
   this.salario = salario
  }
-
-
+}
