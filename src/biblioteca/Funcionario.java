@@ -6,7 +6,7 @@ public class {
  double salario;
  Endereco objEndereco;
 
-  public Funcionario() {
+public Funcionario() {
   this.objEndereco = new Endereco();
 }
 
