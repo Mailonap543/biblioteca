@@ -39,5 +39,5 @@ public class Usuario {
 
   public void setObjEndereco(Endereco objEndereco) {
     this.objEndereco = objEndereco;
-  }
+  }//teste 
 }
