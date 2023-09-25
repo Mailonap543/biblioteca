@@ -1,48 +1,43 @@
 public class Usuario {
-  
-    String nome;
-    int codigo;
-    long cpf;
-    Endereco objEndereco;
 
-public Usuario() {
-  this.objEndereco = new Endereco();
-}
+  String nome;
+  int codigo;
+  long cpf;
+  Endereco objEndereco;
 
-public getUsuario() {
-  this.usurio = new usurio();
-}
+  public Usuario() {
+    this.objEndereco = new Endereco();
+  }
 
-public String getNome() {
-	return nome;
-}
+  public String getNome() {
+    return nome;
+  }
 
-public void setNome(String nome) {
-	this.nome = nome;
-}
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
-public int getCodigo() {
-	return codigo;
-}
+  public int getCodigo() {
+    return codigo;
+  }
 
-public void setCodigo(int codigo) {
-	this.codigo = codigo;
-}
+  public void setCodigo(int codigo) {
+    this.codigo = codigo;
+  }
 
-public long getCpf() {
-	return cpf;
-}
+  public long getCpf() {
+    return cpf;
+  }
 
-public void setCpf(long cpf) {
-	this.cpf = cpf;
-}
+  public void setCpf(long cpf) {
+    this.cpf = cpf;
+  }
 
-public Endereco getObjEndereco() {
-	return objEndereco;
-}
+  public Endereco getObjEndereco() {
+    return objEndereco;
+  }
 
-public void setObjEndereco(Endereco objEndereco) {
-	this.objEndereco = objEndereco;
-}
-
+  public void setObjEndereco(Endereco objEndereco) {
+    this.objEndereco = objEndereco;
+  }
 }
