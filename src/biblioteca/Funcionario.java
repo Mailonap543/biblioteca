@@ -47,5 +47,6 @@ public class Funcionario {
 
   public void setObjEndereco(Endereco objEndereco) {
     this.objEndereco = objEndereco; 
+    //0//
   }
 }
