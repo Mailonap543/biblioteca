@@ -3,7 +3,8 @@ public class Usuario {
   String nome;
   int codigo;
   long cpf;
-  Endereco objEndereco;
+  long RG ;
+  Endereco Endereco;
 
   public Usuario() {
     this.objEndereco = new Endereco();
