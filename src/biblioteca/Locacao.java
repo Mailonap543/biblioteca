@@ -1,58 +1,41 @@
 public class Locacao {
 private double valorLocacao;
 private double valorMulta;
-private Funcionario Funcionario;
-private Usuario Usuario;
-private Livro Livro;
+private Funcionario funcionario;
+private Usuario usuario;
+private Livro livro;
 private Data dataLocacao;
 private Data dataDevolucao;
-private Livro LivroLocado;
+private Livro livroLocado;
 
-public Locacao() {
-  this.Funcionario = new Funcionario();
-  this.Usuario = new Usuario();
-  this.Livro = new Livro();
-  this.dataLocacao = new Data();
-  this.dataDevolucao = new Data();
-  this.LivroLocado = new Livro();
-}
-public String getFuncionario() {
+public Funcionario getFuncionario() {
   return funcionario;
 }
 
-public void setFucionario(String funcionario) {
+public void setFucionario(Funcionario funcionario) {
   this.funcionario = funcionario;
 }
 
-public String getLivro() {
+public Livro getLivro() {
   return livro;
 }
 
-public void setLivro(String livro ) {
-  this. livro =  livro;
+public void setLivro(Livro livro ) {
+  this.livro =  livro;
 }
 
 public date getDataLocacao() {
-  return DataLocacao;
+  return dataLocacao;
 }
 
 public void setDataLocacao(date dataLocacao) {
   this.dataLocacao = dataLocacao;
 }
-
-public date DataDevolucao() {
-  return dataDevolucao;
-}
-
-public void DataDevolucao(boolean status) {
-  this.status = status;
+public Livro getLivroLocado(){
+  return livroLocado;
     
 }
-public string getLivroALocado(){
-  return livroAlocado;
-    
-}
-public void setLivroALocado(string LivroALocado) {
-  this.LivroALocado = LivroALocado;
+public void setLivroLocado(Livro livroLocado) {
+  this.livroLocado = livroLocado;
   }
 }

@@ -4,11 +4,7 @@ public class Usuario {
   int codigo;
   long cpf;
   long RG ;
-  Endereco Endereco;
-
-  public Usuario() {
-    this.objEndereco = new Endereco();
-  }
+  Endereco endereco;
 
   public String getNome() {
     return nome;
@@ -35,10 +31,10 @@ public class Usuario {
   }
 
   public Endereco getObjEndereco() {
-    return objEndereco;
+    return endereco;
   }
 
-  public void setObjEndereco(Endereco objEndereco) {
-    this.objEndereco = objEndereco;
+  public void setObjEndereco(Endereco endereco) {
+    this.endereco = endereco;
   } 
 }

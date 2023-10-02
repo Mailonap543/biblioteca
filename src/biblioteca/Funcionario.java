@@ -5,10 +5,6 @@ public class Funcionario {
   private double salario;
   private Endereco objEndereco;
 
-  public Funcionario() {
-    this.objEndereco = new Endereco();
-  }
-
   public String getNome() {
     return nome;
   }
