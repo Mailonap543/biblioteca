@@ -1,41 +1,45 @@
+import java.util.Date;
+
 public class Locacao {
-private double valorLocacao;
-private double valorMulta;
-private Funcionario funcionario;
-private Usuario usuario;
-private Livro livro;
-private Data dataLocacao;
-private Data dataDevolucao;
-private Livro livroLocado;
 
-public Funcionario getFuncionario() {
-  return funcionario;
-}
+    private double valorLocacao;
+    private double valorMulta;
+    private Funcionario funcionario;
+    private Usuario usuario;
+    private Livro livro;
+    private Date dataLocacao;
+    private Date dataDevolucao;
+    private Livro livroLocado;
 
-public void setFucionario(Funcionario funcionario) {
-  this.funcionario = funcionario;
-}
+    public Funcionario getFuncionario() {
+        return funcionario;
+    }
 
-public Livro getLivro() {
-  return livro;
-}
+    public void setFucionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
+    }
 
-public void setLivro(Livro livro ) {
-  this.livro =  livro;
-}
+    public Livro getLivro() {
+        return livro;
+    }
 
-public date getDataLocacao() {
-  return dataLocacao;
-}
+    public void setLivro(Livro livro) {
+        this.livro = livro;
+    }
 
-public void setDataLocacao(date dataLocacao) {
-  this.dataLocacao = dataLocacao;
-}
-public Livro getLivroLocado(){
-  return livroLocado;
-    
-}
-public void setLivroLocado(Livro livroLocado) {
-  this.livroLocado = livroLocado;
-  }
+    public Date getDataLocacao() {
+        return dataLocacao;
+    }
+
+    public void setDataLocacao(Date dataLocacao) {
+        this.dataLocacao = dataLocacao;
+    }
+    public Livro getLivroLocado() {
+        return livroLocado;
+
+    }
+    public void setLivroLocado(Livro livroLocado) {
+        this.livroLocado = livroLocado;
+    }
+
 }

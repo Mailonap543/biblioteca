@@ -1,48 +1,48 @@
 public class Funcionario {
-  private String nome;
-  private long cpf;
-  private String cargo;
-  private double salario;
-  private Endereco objEndereco;
 
-  public String getNome() {
-    return nome;
-  }
+    private String nome;
+    private long cpf;
+    private String cargo;
+    private double salario;
+    private Endereco objEndereco;
 
-  public void setNome(String nome) {
-    this.nome = nome;
-  }
+    public String getNome() {
+        return nome;
+    }
 
-  public long getCpf() {
-    return cpf;
-  }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-  public void setCpf(long cpf) {
-    this.cpf = cpf;
-  }
+    public long getCpf() {
+        return cpf;
+    }
 
-  public String getCargo() {
-    return cargo;
-  }
+    public void setCpf(long cpf) {
+        this.cpf = cpf;
+    }
 
-  public void setCargo(String cargo) {
-    this.cargo = cargo;
-  }
+    public String getCargo() {
+        return cargo;
+    }
 
-  public double getSalario() {
-    return salario;
-  }
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
 
-  public void setSalario(double salario) {
-    this.salario = salario;
-  }
+    public double getSalario() {
+        return salario;
+    }
 
-  public Endereco getObjEndereco() {
-    return objEndereco;
-  }
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
 
-  public void setObjEndereco(Endereco objEndereco) {
-    this.objEndereco = objEndereco;
-  }
+    public Endereco getObjEndereco() {
+        return objEndereco;
+    }
+
+    public void setObjEndereco(Endereco objEndereco) {
+        this.objEndereco = objEndereco;
+    }
 }
-//block//

@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class MenuBiblioteca {
 
     Scanner scanner = new Scanner(System.in);
+    MenuFuncionario menuFuncionario = new MenuFuncionario();
 
     public void menuBiblioteca() {
         int opcao;
@@ -16,7 +17,7 @@ public class MenuBiblioteca {
 
             switch (opcao) {
                 case 1:
-                    cadastrarFuncionario();
+                    menuFuncionario.cadastrarFuncionario();
                     break;
                 case 2:
                     cadastrarUsuario();
@@ -33,8 +34,8 @@ public class MenuBiblioteca {
                 case 0:
                     System.out.println("Saindo do programa.");
                     break;
-              default:
-                System.out.println("Opção inválida. Tente novamente.");
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
             }
         } while (opcao != 0);
     }
@@ -47,10 +48,6 @@ public class MenuBiblioteca {
         System.out.println("[5] - Ir para locação");
         System.out.println("[0] - Sair");
         System.out.print("Digite aqui a opção: ");
-    }
-
-    public void cadastrarFuncionario() {
-        System.out.println("Opção 1 - Cadastrar funcionário selecionada.");
     }
 
     public void cadastrarUsuario() {
@@ -68,4 +65,5 @@ public class MenuBiblioteca {
     public void irParaLocacao() {
         System.out.println("Opção 5 - Ir para locação selecionada.");
     }
+
 }
