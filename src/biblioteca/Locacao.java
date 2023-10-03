@@ -1,58 +1,45 @@
+import java.util.Date;
+
 public class Locacao {
-private double valorLocacao;
-private double valorMulta;
-private Funcionario Funcionario;
-private Usuario Usuario;
-private Livro Livro;
-private Data dataLocacao;
-private Data dataDevolucao;
-private Livro LivroLocado;
 
-public Locacao() {
-  this.Funcionario = new Funcionario();
-  this.Usuario = new Usuario();
-  this.Livro = new Livro();
-  this.dataLocacao = new Data();
-  this.dataDevolucao = new Data();
-  this.LivroLocado = new Livro();
-}
-public String getFuncionario() {
-  return funcionario;
-}
+    private double valorLocacao;
+    private double valorMulta;
+    private Funcionario funcionario;
+    private Usuario usuario;
+    private Livro livro;
+    private Date dataLocacao;
+    private Date dataDevolucao;
+    private Livro livroLocado;
 
-public void setFucionario(String funcionario) {
-  this.funcionario = funcionario;
-}
+    public Funcionario getFuncionario() {
+        return funcionario;
+    }
 
-public String getLivro() {
-  return livro;
-}
+    public void setFucionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
+    }
 
-public void setLivro(String livro ) {
-  this. livro =  livro;
-}
+    public Livro getLivro() {
+        return livro;
+    }
 
-public date getDataLocacao() {
-  return DataLocacao;
-}
+    public void setLivro(Livro livro) {
+        this.livro = livro;
+    }
 
-public void setDataLocacao(date dataLocacao) {
-  this.dataLocacao = dataLocacao;
-}
+    public Date getDataLocacao() {
+        return dataLocacao;
+    }
 
-public date DataDevolucao() {
-  return dataDevolucao;
-}
+    public void setDataLocacao(Date dataLocacao) {
+        this.dataLocacao = dataLocacao;
+    }
+    public Livro getLivroLocado() {
+        return livroLocado;
 
-public void DataDevolucao(boolean status) {
-  this.status = status;
-    
-}
-public string getLivroALocado(){
-  return livroAlocado;
-    
-}
-public void setLivroALocado(string LivroALocado) {
-  this.LivroALocado = LivroALocado;
-  }
+    }
+    public void setLivroLocado(Livro livroLocado) {
+        this.livroLocado = livroLocado;
+    }
+
 }
