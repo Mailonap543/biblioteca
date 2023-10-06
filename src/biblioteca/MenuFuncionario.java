@@ -38,7 +38,13 @@ public class MenuFuncionario {
     System.out.println("Digite seu salario");
     double salario = scanner.nextDouble();
     System.out.println("Digite seu ENDERECO");
-    String endereco = scanner.next();
+    System.out.println("Digite seu bairro");
+String bairro = scanner.next();
+
+System.out.println("Digite seu numero");
+int numero = scanner.nextInt();
+    
+Endereco endereco = new Endereco(rua, bairro, numero);
 
   }
 
