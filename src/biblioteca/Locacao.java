@@ -4,18 +4,18 @@ public class Locacao {
 
     private double valorLocacao;
     private double valorMulta;
-    private Funcionario funcionario;
+    private Usuario funcionario;
     private Usuario usuario;
     private Livro livro;
     private Date dataLocacao;
     private Date dataDevolucao;
     private Livro livroLocado;
 
-    public Funcionario getFuncionario() {
+    public Usuario getFuncionario() {
         return funcionario;
     }
 
-    public void setFucionario(Funcionario funcionario) {
+    public void setUsuario(Usuario funcionario) {
         this.funcionario = funcionario;
     }
 
