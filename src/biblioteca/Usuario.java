@@ -5,6 +5,9 @@ public class Usuario {
     private long cpf;
     private long RG;
     private Endereco endereco;
+    private String userName;
+    private String senha;
+    private String permissão;
 
     public String getNome() {
         return nome;
@@ -30,12 +33,35 @@ public class Usuario {
         this.cpf = cpf;
     }
 
-    public Endereco getObjEndereco() {
+    public Endereco getEndereco() {
         return endereco;
     }
 
-    public void setObjEndereco(Endereco endereco) {
+    public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+    public String getUserName() {
+        return userName;
+    }
+    
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+    
+    public String getSenha() {
+        return senha;
+    }
+    
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+    
+    public String getPermissao() {
+        return permissao;
+    }
+    
+    public void setPermissao(String permissao) {
+        this.permissao = permissao;
     }
 
 }
