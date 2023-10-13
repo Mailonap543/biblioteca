@@ -1,3 +1,12 @@
 {
-  "files": {}
+  "files": {
+    "pom.xml": [
+      {
+        "id": "edb74562-8d93-455b-8213-c55b5c846230",
+        "line": 3,
+        "version": 2,
+        "index": 114
+      }
+    ]
+  }
 }

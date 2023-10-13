@@ -1,5 +1,6 @@
 import java.util.Date;
 import java.util.Scanner;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class MenuBiblioteca {
 
