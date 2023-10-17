@@ -40,14 +40,13 @@ public class MenuFuncionario {
     System.out.println("Digite seu ENDERECO");
     Endereco endereco = scanner.next();
     System.out.println("Digite seu bairro");
-    String bairro = scanner.next();
+String bairro = scanner.next();
 
-   System.out.println("Digite seu numero");
-   int numero = scanner.nextInt();
+System.out.println("Digite seu numero");
+int numero = scanner.nextInt();
     
-   Endereco endereco = new Endereco(rua, bairro, 
-   numero);
+Endereco  = new Endereco(rua, bairro, numero);
+
 
   }
-
 }

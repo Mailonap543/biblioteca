@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 import org.mindrot.jbcrypt.BCrypt;
 
 public class MenuCadastro {
@@ -28,4 +29,9 @@ public class MenuCadastro {
 
         scanner.close();
     }
+
+	@Override
+	public String toString() {
+		return "MenuCadastro []";
+	}
 }
