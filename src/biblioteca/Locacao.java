@@ -3,7 +3,7 @@ import java.util.Date;
 public class Locacao {
 
     private double valorLocacao;
-    private double valorMulta;
+    private double valorMulta; 
     private Usuario funcionario;
     private Usuario usuario;
     private Livro livro;
@@ -15,8 +15,16 @@ public class Locacao {
         return funcionario;
     }
 
-    public void setUsuario(Usuario funcionario) {
+    public void setFuncionario(Usuario funcionario) { 
         this.funcionario = funcionario;
+    }
+
+    public Usuario getUsuario() { 
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) { 
+        this.usuario = usuario;
     }
 
     public Livro getLivro() {
@@ -34,12 +42,34 @@ public class Locacao {
     public void setDataLocacao(Date dataLocacao) {
         this.dataLocacao = dataLocacao;
     }
+
     public Livro getLivroLocado() {
         return livroLocado;
-
     }
+
     public void setLivroLocado(Livro livroLocado) {
         this.livroLocado = livroLocado;
     }
 
+    public double getValorLocacao() {
+        return valorLocacao;
+    }
+
+    public void setValorLocacao(double valorLocacao) {
+        this.valorLocacao = valorLocacao;
+    }
+
+    public double getValorMulta() {
+        return valorMulta;
+    }
+
+    public void setValorMulta(double valorMulta) {
+        this.valorMulta = valorMulta;
+    }
+
+    public Date getDataDevolucao() {
+        return dataDevolucao;
+    }
+
+   
 }

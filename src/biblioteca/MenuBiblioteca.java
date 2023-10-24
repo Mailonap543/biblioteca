@@ -1,11 +1,10 @@
 import java.util.Date;
 import java.util.Scanner;
-import org.mindrot.jbcrypt.BCrypt;
 
 public class MenuBiblioteca {
 
-    Scanner scanner = new Scanner(System.in);
-    MenuFuncionario menuFuncionario = new MenuFuncionario();
+    private Scanner scanner = new Scanner(System.in);
+    private MenuFuncionario menuFuncionario = new MenuFuncionario();
 
     public void menuBiblioteca() {
         int opcao;
@@ -39,6 +38,8 @@ public class MenuBiblioteca {
                     System.out.println("Opção inválida. Tente novamente.");
             }
         } while (opcao != 0);
+
+        scanner.close(); 
     }
 
     public void exibirMenu() {
@@ -48,7 +49,7 @@ public class MenuBiblioteca {
         System.out.println("[4] - Mostrar dados do cadastro");
         System.out.println("[5] - Ir para locação");
         System.out.println("[0] - Sair");
-        System.out.print("Digite aqui a opção: ");
+        System.out.print("Digite a opção desejada: ");
     }
 
     public void cadastrarUsuario() {
@@ -66,5 +67,4 @@ public class MenuBiblioteca {
     public void irParaLocacao() {
         System.out.println("Opção 5 - Ir para locação selecionada.");
     }
-
 }

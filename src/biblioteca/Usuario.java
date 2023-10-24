@@ -1,12 +1,13 @@
-public class Usuario {
+import org.mindrot.jbcrypt.BCrypt;
 
+public class Usuario {
     private String nome;
     private int codigo;
     private long cpf;
     private long RG;
     private Endereco endereco;
     private String userName;
-    private String senha;
+    private String senha; 
     private String permissao;
 
     public String getNome() {
@@ -61,8 +62,9 @@ public class Usuario {
         return senha;
     }
 
+    // Método para definir e armazenar a senha criptografada
     public void setSenha(String senha) {
-        this.senha = senha;
+        this.senha = BCrypt.hashpw(senha, BCrypt.gensalt());
     }
 
     public String getPermissao() {
@@ -73,4 +75,8 @@ public class Usuario {
         this.permissao = permissao;
     }
 
+    
+    public boolean verificarSenha(String senha) {
+        return BCrypt.checkpw(senha, this.senha);
+    }
 }

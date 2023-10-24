@@ -1,9 +1,15 @@
 public class Livro {
-
     private String titulo;
     private String genero;
     private String autor;
     private boolean status;
+
+    public Livro(String titulo, String genero, String autor) {
+        this.titulo = titulo;
+        this.genero = genero;
+        this.autor = autor;
+        this.status = false; 
+    }
 
     public String getTitulo() {
         return titulo;
@@ -29,12 +35,15 @@ public class Livro {
         this.autor = autor;
     }
 
-    public boolean isStatus() {
+    public boolean isEmprestado() {
         return status;
     }
 
-    public void setStatus(boolean status) {
-        this.status = status;
+    public void emprestar() {
+        this.status = true;
+    }
 
+    public void devolver() {
+        this.status = false;
     }
 }
