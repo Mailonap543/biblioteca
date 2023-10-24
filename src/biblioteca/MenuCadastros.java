@@ -15,22 +15,22 @@ public class MenuCadastros {
 
         switch (opcao) {
             case 1:
-                System.out.println("Cadastro de Funcionário selecionado.");
+                System.out.println("Cadastro de Funcionário selecionado ");
             
                 break;
             case 2:
-                System.out.println("Cadastro de Cliente selecionado.");
+                System.out.println("Cadastro de Cliente selecionado ");
                 
                 break;
             case 3:
-                System.out.println("Cadastro de Livro selecionado.");
+                System.out.println("Cadastro de Livro selecionado");
                 
                 break;
             case 9:
-                System.out.println("Voltar ao menu principal.");
+                System.out.println("voltar ao menu principaldigit");
                 break;
             default:
-                System.out.println("Opção inválida.");
+                System.out.println("Opção inválida 0");
                 break;
         }
 
