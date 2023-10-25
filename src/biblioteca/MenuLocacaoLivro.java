@@ -62,19 +62,6 @@ public class MenuLocacaoLivro {
           System.out.println("O livro já está disponível na biblioteca.");
       }
     
-
-    public static void mostrarDadosLivroLocado() {
-        Livro livro = new Livro();
-        livro.mostrarDados();
-        livro.locar();
-        livro.mostrarDados();
-        livro.devolver();
-        livro.mostrarDados();
-    }
-
-    public static void mostrarDadosLivroDevolvido() {
-      System.out.println("Título: " + titulo);
-      System.out.println("Autor: " + autor);
-      System.out.println("Ano de Publicação: " + anoPublicacao);
-    }
+ }
+ 
 }
