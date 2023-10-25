@@ -1,4 +1,4 @@
-import org.mindrot.jbcrypt.BCrypt;
+
 import java.util.Scanner;
 
 public class MenuCadastroExistente {
@@ -19,14 +19,7 @@ public class MenuCadastroExistente {
 
         System.out.print("Digite a permissão (funcionario/dono/cliente): ");
         String permissao = scanner.nextLine();
-
-        String senhaCriptografada = BCrypt.hashpw(senha, BCrypt.gensalt());
-        System.out.println("Nome: " + nome);
-        System.out.println("Idade: " + idade);
-        System.out.println("UserName: " + userName);
-        System.out.println("Permissão: " + permissao);
-        System.out.println("Senha criptografada: " + senhaCriptografada);
-
-        scanner.close();
+      
+       scanner.close();
     }
 }
