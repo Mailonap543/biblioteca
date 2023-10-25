@@ -1,8 +1,7 @@
 public class Endereco {
-
-    String rua;
-    String bairro;
-    int numero;
+    private String rua;
+    private String bairro;
+    private int numero;
 
     public Endereco(String rua, String bairro, int numero) {
         this.rua = rua;
@@ -31,6 +30,10 @@ public class Endereco {
     }
 
     public void setNumero(int numero) {
-        this.numero = numero;
+        if (numero > 0) {
+            this.numero = numero;
+        } else {
+            System.out.println("Número inválido ");
+        }
     }
 }
