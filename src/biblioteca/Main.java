@@ -1,9 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        MenuBiblioteca biblioteca = new MenuBiblioteca();
-        biblioteca.exibirMenu();
-       
-
+        
+  System.out.println("Hello World");
     }
  }
 
