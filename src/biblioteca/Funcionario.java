@@ -5,13 +5,11 @@ public class Funcionario {
     private String cargo;
     private double salario;
     private Endereco objEndereco;
-
     
     public Funcionario() {
         this.objEndereco = new Endereco();
     }
-
-  
+    
     public Funcionario(String nome, long cpf, String cargo, double salario, Endereco objEndereco) {
         this.nome = nome;
         this.cpf = cpf;
@@ -20,7 +18,6 @@ public class Funcionario {
         this.objEndereco = objEndereco;
     }
 
-   
     public String getNome() {
         return nome;
     }
