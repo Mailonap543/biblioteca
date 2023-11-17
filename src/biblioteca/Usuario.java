@@ -7,8 +7,7 @@ public class Usuario {
     private String userName;
     private String senha;
     private String permissao;
-
-
+    
     public Usuario(String nome, int idade, String userName, String senha, String permissao) {
         this.nome = nome;
         this.idade = idade;
@@ -16,8 +15,7 @@ public class Usuario {
         this.senha = senha;
         this.permissao = permissao;
     }
-
-
+    
     public String getUserName() {
         return userName;
     }
@@ -41,5 +39,4 @@ public class Usuario {
     public void setPermissao(String permissao) {
         this.permissao = permissao;
     }
-
 }
