@@ -2,7 +2,7 @@ package biblioteca;
 import java.util.ArrayList;
 public class Usuario {
 
-    privateString nome;
+    private String nome;
     private int idade;
     private String userName;
     private String senha;
