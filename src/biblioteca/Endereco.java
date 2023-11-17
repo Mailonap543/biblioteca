@@ -1,14 +1,16 @@
+
 public class Endereco {
+  
     private String rua;
-    private String bairro;
     private int numero;
-
-    public Endereco(String rua, String bairro, int numero) {
+    private String bairro;
+  
+    public Endereco(String rua, int numero, String bairro) {
         this.rua = rua;
-        this.bairro = bairro;
         this.numero = numero;
+        this.bairro = bairro;
     }
-
+  
     public String getRua() {
         return rua;
     }
@@ -17,23 +19,19 @@ public class Endereco {
         this.rua = rua;
     }
 
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
     public String getBairro() {
         return bairro;
     }
 
     public void setBairro(String bairro) {
         this.bairro = bairro;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        if (numero > 0) {
-            this.numero = numero;
-        } else {
-            System.out.println("Número inválido ");
-        }
     }
 }
