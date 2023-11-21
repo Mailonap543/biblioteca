@@ -1,50 +1,51 @@
 package biblioteca;
+
 public class Livro {
-    private String titulo;
-    private String genero;
-    private String autor;
-    private boolean status;
+  private String titulo;
+  private String genero;
+  private String autor;
+  private boolean status;
 
-    public Livro(String titulo, String genero, String autor) {
-        this.titulo = titulo;
-        this.genero = genero;
-        this.autor = autor;
-        this.status = false; 
-    }
+  public Livro(String titulo, String genero, String autor) {
+    this.titulo = titulo;
+    this.genero = genero;
+    this.autor = autor;
+    this.status = false;
+  }
 
-    public String getTitulo() {
-        return titulo;
-    }
+  public String getTitulo() {
+    return titulo;
+  }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
+  public void setTitulo(String titulo) {
+    this.titulo = titulo;
+  }
 
-    public String getGenero() {
-        return genero;
-    }
+  public String getGenero() {
+    return genero;
+  }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
+  public void setGenero(String genero) {
+    this.genero = genero;
+  }
 
-    public String getAutor() {
-        return autor;
-    }
+  public String getAutor() {
+    return autor;
+  }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
+  public void setAutor(String autor) {
+    this.autor = autor;
+  }
 
-    public boolean isEmprestado() {
-        return status;
-    }
+  public boolean isEmprestado() {
+    return status;
+  }
 
-    public void emprestar() {
-        this.status = true;
-    }
+  public void emprestar() {
+    this.status = true;
+  }
 
-    public void devolver() {
-        this.status = false;
-    }
+  public void devolver() {
+    this.status = false;
+  }
 }

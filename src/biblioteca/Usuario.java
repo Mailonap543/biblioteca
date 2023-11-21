@@ -1,42 +1,44 @@
 package biblioteca;
+
 import java.util.ArrayList;
+
 public class Usuario {
 
-    private String nome;
-    private int idade;
-    private String userName;
-    private String senha;
-    private String permissao;
-    
-    public Usuario(String nome, int idade, String userName, String senha, String permissao) {
-        this.nome = nome;
-        this.idade = idade;
-        this.userName = userName;
-        this.senha = senha;
-        this.permissao = permissao;
-    }
-    
-    public String getUserName() {
-        return userName;
-    }
+  private String nome;
+  private int idade;
+  private String userName;
+  private String senha;
+  private String permissao;
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
+  public Usuario(String nome, int idade, String userName, String senha, String permissao) {
+    this.nome = nome;
+    this.idade = idade;
+    this.userName = userName;
+    this.senha = senha;
+    this.permissao = permissao;
+  }
 
-    public String getSenha() {
-        return senha;
-    }
+  public String getUserName() {
+    return userName;
+  }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
+  public void setUserName(String userName) {
+    this.userName = userName;
+  }
 
-    public String getPermissao() {
-        return permissao;
-    }
+  public String getSenha() {
+    return senha;
+  }
 
-    public void setPermissao(String permissao) {
-        this.permissao = permissao;
-    }
+  public void setSenha(String senha) {
+    this.senha = senha;
+  }
+
+  public String getPermissao() {
+    return permissao;
+  }
+
+  public void setPermissao(String permissao) {
+    this.permissao = permissao;
+  }
 }

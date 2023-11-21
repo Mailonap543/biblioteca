@@ -1,73 +1,69 @@
+package biblioteca;
+
 public class Funcionario {
-    
-    private String nome;
-    private long cpf;
-    private String cargo;
-    private double salario;
-    private Endereco objEndereco;
-    
-    public Funcionario() {
-        this.objEndereco = new Endereco();
-    }
-    
-    public Funcionario(String nome, long cpf, String cargo, double salario, Endereco objEndereco) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.cargo = cargo;
-        this.salario = salario;
-        this.objEndereco = objEndereco;
-    }
 
-    public String getNome() {
-        return nome;
-    }
+  private String nome;
+  private long cpf;
+  private String cargo;
+  private double salario;
+  private String endereco;
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+  public Funcionario(String nome, long cpf, String cargo, double salario) {
+    this.nome = nome;
+    this.cpf = cpf;
+    this.cargo = cargo;
+    this.salario = salario;
+  }
 
-    public long getCpf() {
-        return cpf;
-    }
+  public String getNome() {
+    return nome;
+  }
 
-    public void setCpf(long cpf) {
-        this.cpf = cpf;
-    }
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
-    public String getCargo() {
-        return cargo;
-    }
+  public long getCpf() {
+    return cpf;
+  }
 
-    public void setCargo(String cargo) {
-        this.cargo = cargo;
-    }
+  public void setCpf(long cpf) {
+    this.cpf = cpf;
+  }
 
-    public double getSalario() {
-        return salario;
-    }
+  public String getCargo() {
+    return cargo;
+  }
 
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
+  public void setCargo(String cargo) {
+    this.cargo = cargo;
+  }
 
-    public Endereco getObjEndereco() {
-        return objEndereco;
-    }
+  public double getSalario() {
+    return salario;
+  }
 
-    public void setObjEndereco(Endereco objEndereco) {
-        this.objEndereco = objEndereco;
-    }
+  public void setSalario(double salario) {
+    this.salario = salario;
+  }
 
-   
-    // Método toString para representação de string do objeto
-    @Override
-    public String toString() {
-        return "Funcionario{" +
-                "nome='" + nome + '\'' +
-                ", cpf=" + cpf +
-                ", cargo='" + cargo + '\'' +
-                ", salario=" + salario +
-                ", objEndereco=" + objEndereco +
-                '}';
-    }
+  public String getObjEndereco() {
+    return endereco;
+  }
+
+  public void setObjEndereco(String objEndereco) {
+    this.endereco = objEndereco;
+  }
+
+  // Método toString para representação de string do objeto
+  @Override
+  public String toString() {
+    return "Funcionario{" +
+        "nome='" + nome + '\'' +
+        ", cpf=" + cpf +
+        ", cargo='" + cargo + '\'' +
+        ", salario=" + salario +
+        ", objEndereco=" + endereco +
+        '}';
+  }
 }
