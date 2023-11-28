@@ -20,19 +20,19 @@ public class Main {
 
       switch (opcao) {
         case 1:
-          cadastrarFuncionario();
+          cadastrarFuncionario(scanner);
           break;
         case 2:
-            cadastrarUsuario();
+          cadastrarUsuario(scanner);
           break;
         case 3:
-            cadastrarLivro();
+          cadastrarLivro(scanner);
           break;
         case 4:
-            mostrarDadosDeCadastro();
+          mostrarDadosDeCadastro(scanner);
           break;
         case 5:
-            irParaLocao();
+          irParaLocao(scanner);
           break;
         case 0:
           System.out.println("Saindo do programa.");
@@ -44,36 +44,32 @@ public class Main {
     } while (opcao != 0);
   }
 
-  public static void cadastrarFuncionario() {
-    Scanner scanner = new Scanner(System.in);
+  public static void cadastrarFuncionario(Scanner scanner) {
     System.out.println("Digite seu nome");
+    // DEVE CADASTRAR TODOS OS DADOS QUE EXISTEM NA CLASSE FUNCIONÁRIO
     String nome = scanner.next();
     System.out.println(nome);
   }
 
-  public static void cadastrarUsuario() {
-    Scanner scanner = new Scanner(System.in);
+  public static void cadastrarUsuario(Scanner scanner) {
     System.out.println("Digite seu nome");
+    // DEVE CADASTRAR TODOS OS DADOS QUE EXISTEM NA CLASSE USUARIO
     String nome = scanner.next();
     System.out.println(nome);
   }
-  public static void cadastrarLivro() {
-    Scanner scanner = new Scanner(System.in);
+
+  public static void cadastrarLivro(Scanner scanner) {
     System.out.println("Digite o  nome do livro");
+    // CADASTRAR OS DADOS CORRETOS
     String nome = scanner.next();
     System.out.println(nome);
   }
-  public static void mostrarDadosDeCadastro() {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("os dados cadastrados sao: ");
-    String nome = scanner.next();
-    System.out.println(nome);
 
+  public static void mostrarDadosDeCadastro() {
+    System.out.println("os dados cadastrados sao: ");
   }
+
   public static void irParaLocao() {
-    Scanner scanner = new Scanner(System.in);
     System.out.println("Digite seu nome");
-    String nome = scanner.next();
-    System.out.println(nome);
   }
 }
