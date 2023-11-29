@@ -46,23 +46,61 @@ public class Main {
 
   public static void cadastrarFuncionario(Scanner scanner) {
     System.out.println("Digite seu nome");
-    // DEVE CADASTRAR TODOS OS DADOS QUE EXISTEM NA CLASSE FUNCIONÁRIO
     String nome = scanner.next();
     System.out.println(nome);
+
+    System.out.println("Digite seu cpf");
+    long cpf = scanner.nextLong();
+    System.out.println(cpf);
+
+    System.out.println("Digite seu salario");
+    double salario = scanner.nextDouble();
+    System.out.println(salario);
+
+    System.out.println("Digite seu cargo");
+    String cargo = scanner.next();
+    System.out.println(cargo);
+
+    System.out.println("Digite seu endereco");
+    String endereco = scanner.next();
+    System.out.println(enderoco);
   }
 
   public static void cadastrarUsuario(Scanner scanner) {
     System.out.println("Digite seu nome");
-    // DEVE CADASTRAR TODOS OS DADOS QUE EXISTEM NA CLASSE USUARIO
     String nome = scanner.next();
     System.out.println(nome);
+
+    System.out.println("Digite seu userName");
+    String userName = scanner.next();
+    System.out.println(nome);
+    
+    System.out.println("Digite sua senha");
+    String permissao = scanner.next();
+    System.out.println(senha);
+
+    System.out.println("Digite sua idade");
+    int idade= scanner.nextInt();
+    System.out.println(idade);
+
   }
 
   public static void cadastrarLivro(Scanner scanner) {
     System.out.println("Digite o  nome do livro");
-    // CADASTRAR OS DADOS CORRETOS
-    String nome = scanner.next();
-    System.out.println(nome);
+    String titulo= scanner.next();
+    System.out.println(titulo);
+
+    System.out.println("Digite o  genero do livro");
+    String genero = scanner.next();
+    System.out.println(genero);
+
+    System.out.println("Digite o  autor do livro");
+    String autor = scanner.next();
+    System.out.println(autor);
+
+    System.out.println("Digite o  autor do livro");
+    boolean status = scanner.nextBoolean();
+    System.out.println(status);
   }
 
   public static void mostrarDadosDeCadastro() {
