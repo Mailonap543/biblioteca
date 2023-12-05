@@ -98,16 +98,19 @@ public class Main {
     String autor = scanner.next();
     System.out.println(autor);
 
-    System.out.println("Digite o  autor do livro");
-    boolean status = scanner.nextBoolean();
-    System.out.println(status);
+  
   }
 
   public static void mostrarDadosDeCadastro() {
-    System.out.println("os dados cadastrados sao: ");
+    System.out.println();
   }
 
   public static void irParaLocao() {
-    System.out.println("Digite seu nome");
+   
+    }
+    System.out.println("seus dados de cadastro de livro sao");
+      System.out.println("nome: " + cadastro.getNome());
+    
+    
   }
 }
