@@ -32,7 +32,7 @@ public class Main {
           mostrarDadosDeCadastro(scanner);
           break;
         case 5:
-          irParaLocao(scanner);
+          irParaLocao();
           break;
         case 0:
           System.out.println("Saindo do programa.");
@@ -63,7 +63,7 @@ public class Main {
 
     System.out.println("Digite seu endereco");
     String endereco = scanner.next();
-    System.out.println(enderoco);
+    System.out.println(endereco);
   }
 
   public static void cadastrarUsuario(Scanner scanner) {
@@ -73,21 +73,25 @@ public class Main {
 
     System.out.println("Digite seu userName");
     String userName = scanner.next();
-    System.out.println(nome);
-    
+    System.out.println(userName);
+
     System.out.println("Digite sua senha");
-    String permissao = scanner.next();
+    String senha = scanner.next();
     System.out.println(senha);
 
+    System.out.println("Digite sua permissão");
+    String permissao = scanner.next();
+    System.out.println(permissao);
+
     System.out.println("Digite sua idade");
-    int idade= scanner.nextInt();
+    int idade = scanner.nextInt();
     System.out.println(idade);
 
   }
 
   public static void cadastrarLivro(Scanner scanner) {
     System.out.println("Digite o  nome do livro");
-    String titulo= scanner.next();
+    String titulo = scanner.next();
     System.out.println(titulo);
 
     System.out.println("Digite o  genero do livro");
@@ -98,16 +102,68 @@ public class Main {
     String autor = scanner.next();
     System.out.println(autor);
 
-    System.out.println("Digite o  autor do livro");
-    boolean status = scanner.nextBoolean();
-    System.out.println(status);
   }
 
-  public static void mostrarDadosDeCadastro() {
-    System.out.println("os dados cadastrados sao: ");
+  public static void mostrarDadosDeCadastro(Scanner scanner) {
   }
 
   public static void irParaLocao() {
-    System.out.println("Digite seu nome");
+    int opcao;
+    Scanner scanner = new Scanner(System.in);
+    do {
+      System.out.print("\n::::::::::::::::: Sistema de Locação ::::::::::::::::::\n" +
+          " Escolha uma opção abaixo\n" +
+          " [1] - Locar livro\n" +
+          " [2] - Devolver livro\n" +
+          " [3] - Mostrar os dados do livro locado\n" +
+          " [4] - Mostra os dados do livro devolvido\n" +
+          " [5] - Sair da locação\n" +
+          " Digite aqui a opção: \n");
+
+      opcao = scanner.nextInt();
+
+      switch (opcao) {
+        case 1:
+          locarLivro(scanner);
+          break;
+        case 2:
+          devolverLivro(scanner);
+          break;
+        case 3:
+          mostrarDadosDoLivroLocado();
+          break;
+        case 4:
+          mostrarDadosDoLivroDevolvido();
+          break;
+        case 5:
+          System.out.println("Saindo do programa.");
+          break;
+        default:
+          System.out.println("Opção inválida. Tente novamente.");
+          break;
+      }
+    } while (opcao != 5);
+
+  }
+
+  public static void locarLivro(Scanner scanner) {
+    // Implementar lógica passando os dados do livro que você quer locar.
+    System.out.println("Digite o titulo do livro que você deseja locar:");
+    String nome = scanner.next();
+    System.out.println(nome);
+  }
+
+  public static void devolverLivro(Scanner scanner) {
+    // Implementar lógica passando os dados do livro que você quer devolver.
+  }
+
+  public static void mostrarDadosDoLivroLocado() {
+    // Implementar lógica passando os dados do livro locado que você quer mostrar os
+    // dados.
+  }
+
+  public static void mostrarDadosDoLivroDevolvido() {
+    // Implementar lógica passando os dados do livro devolvido que você quer mostrar
+    // os dados.
   }
 }
