@@ -110,60 +110,89 @@ public class Main {
   public static void irParaLocao() {
     int opcao;
     Scanner scanner = new Scanner(System.in);
-    do {
-      System.out.print("\n::::::::::::::::: Sistema de Locação ::::::::::::::::::\n" +
-          " Escolha uma opção abaixo\n" +
-          " [1] - Locar livro\n" +
-          " [2] - Devolver livro\n" +
-          " [3] - Mostrar os dados do livro locado\n" +
-          " [4] - Mostra os dados do livro devolvido\n" +
-          " [5] - Sair da locação\n" +
-          " Digite aqui a opção: \n");
+do {
+            System.out.print("::::::::::::::::: Sistema de Locação ::::::::::::::::::\n" +
+                    " Escolha uma opção abaixo\n" +
+                    " [1] - Locar livro\n" +
+                    " [2] - Devolver livro\n" +
+                    " [3] - Mostrar os dados do livro locado\n" +
+                    " [4] - Mostra os dados do livro devolvido\n" +
+                    " [5] - Sair da locação\n" +
+                    " Digite aqui a opção: ");
+            opcao = scanner.nextInt();
 
-      opcao = scanner.nextInt();
+            switch (opcao) {
+                case 1:
+                    locarLivro(scanner);
+                    break;
+                case 2:
+                    devolverLivro(scanner);
+                    break;
+                case 3:
+                    mostrarDadosDoLivroLocado();
+                    break;
+                case 4:
+                    mostrarDadosDoLivroDevolvido();
+                    break;
+                case 5:
+                    System.out.println("Saindo do programa.");
+                    break;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+                    break;
+            }
+        } while (opcao != 5);
 
-      switch (opcao) {
-        case 1:
-          locarLivro(scanner);
-          break;
-        case 2:
-          devolverLivro(scanner);
-          break;
-        case 3:
-          mostrarDadosDoLivroLocado();
-          break;
-        case 4:
-          mostrarDadosDoLivroDevolvido();
-          break;
-        case 5:
-          System.out.println("Saindo do programa.");
-          break;
-        default:
-          System.out.println("Opção inválida. Tente novamente.");
-          break;
-      }
-    } while (opcao != 5);
+        scanner.close();
+    }
 
-  }
+    public static void locarLivro(Scanner scanner) {
+        System.out.println("Digite o título do livro que você deseja locar:");
+        String titulo = scanner.next();
+        System.out.println(titulo);
 
-  public static void locarLivro(Scanner scanner) {
-    // Implementar lógica passando os dados do livro que você quer locar.
-    System.out.println("Digite o titulo do livro que você deseja locar:");
-    String nome = scanner.next();
-    System.out.println(nome);
-  }
+        System.out.println("Digite o gênero do livro que você deseja locar:");
+        String genero = scanner.next();
+        System.out.println(genero);
 
-  public static void devolverLivro(Scanner scanner) {
-    // Implementar lógica passando os dados do livro que você quer devolver.
-  }
+        System.out.println("Digite o autor do livro que você deseja locar:");
+        String autor = scanner.next();
+        System.out.println(autor);
 
-  public static void mostrarDadosDoLivroLocado() {
-    // Implementar lógica passando os dados do livro locado que você quer mostrar os
-    // dados.
-  }
+        System.out.println("Digite o status do livro que você deseja locar:");
+        boolean status = scanner.nextBoolean();
+        System.out.println(status);
+    }
 
-  public static void mostrarDadosDoLivroDevolvido() {
-    // Implementar lógica passando os dados do livro devolvido que você quer mostrar
-    // os dados.
-  }
+    public static void devolverLivro(Scanner scanner) {
+        System.out.println("Digite o título do livro que você deseja devolver:");
+        String titulo = scanner.next();
+        System.out.println(titulo);
+
+        System.out.println("Digite o gênero do livro que você deseja devolver:");
+        String genero = scanner.next();
+        System.out.println(genero);
+
+        System.out.println("Digite o autor do livro que você deseja devolver:");
+        String autor = scanner.next();
+        System.out.println(autor);
+
+        System.out.println("Digite o status do livro que você deseja devolver:");
+        boolean status = scanner.nextBoolean();
+        System.out.println(status);
+    }
+
+    public static void mostrarDadosDoLivroLocado() {
+        System.out.println("Título: " + nome);
+        System.out.println("Autor: " + autor);
+        System.out.println("Gênero: " + genero);
+        System.out.println("Status: " + status);
+    }
+
+    public static void mostrarDadosDoLivroDevolvido() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Autor: " + autor);
+        System.out.println("Gênero: " + genero);
+        System.out.println("Status: " + status);
+    }
 }
