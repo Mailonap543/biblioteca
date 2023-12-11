@@ -5,6 +5,12 @@ import biblioteca.Usuario;
 public class Main {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
+
+    //Passo 1: setar os dados do objeto abaixo:
+    //Exemplo: locacao.getLivro.setAutor("J.K. Rowling");
+    
+    Locacao locacao = new Locacao();
+    
     int opcao;
 
     do {
@@ -47,7 +53,8 @@ public class Main {
   public static void cadastrarFuncionario(Scanner scanner) {
     System.out.println("Digite seu nome");
     String nome = scanner.next();
-    System.out.println(nome);
+  
+    locacao.getFuncionario().setNome(nome);
 
     System.out.println("Digite seu cpf");
     long cpf = scanner.nextLong();
@@ -186,14 +193,14 @@ public class Main {
     mostrarDadosDoLivroDevolvido(titulo, autor, genero, status);
   }
 
-  public static void mostrarDadosDoLivroLocado(String titulo, String autor, String genero, boolean status) {
+  public static void mostrarDadosDoLivroLocado() {
     System.out.println("Título: " + titulo);
     System.out.println("Autor: " + autor);
     System.out.println("Gênero: " + genero);
     System.out.println("Status: " + status);
   }
 
-  public static void mostrarDadosDoLivroDevolvido(String titulo, String autor, String genero, boolean status) {
+  public static void mostrarDadosDoLivroDevolvido() {
     System.out.println("Título: " + titulo);
     System.out.println("Autor: " + autor);
     System.out.println("Gênero: " + genero);
