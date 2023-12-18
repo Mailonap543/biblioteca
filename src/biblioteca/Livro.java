@@ -6,11 +6,11 @@ public class Livro {
   private String autor;
   private boolean status;
 
-  public Livro(String titulo, String genero, String autor) {
+  public Livro(String titulo, String genero, String autor, boolean status) {
     this.titulo = titulo;
     this.genero = genero;
     this.autor = autor;
-    this.status = false;
+    this.status = status;
   }
 
   public String getTitulo() {
