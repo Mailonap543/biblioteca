@@ -3,208 +3,142 @@ import java.util.Scanner;
 import biblioteca.Usuario;
 
 public class Main {
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+        Locacao objLocacao = new Locacao();
+        Locacao objLocacao2 = new Locacao();
+        Locacao objLocacao3 = new Locacao();
+        byte op;
 
-    //Passo 1: setar os dados do objeto abaixo:
-    //Exemplo: locacao.getLivro.setAutor("J.K. Rowling");
-    
-    Locacao locacao = new Locacao();
-    
-    int opcao;
+        do{
+            System.out.print("Escolha uma opção abaixo\n" +
+                "[1] - Cadastrar funcionário\n" +
+                "[2] - Cadastrar usuário\n" +
+                "[3] - Cadastrar livro\n" +
+                "[4] - Mostrar todos os dados do cadastro\n" +
+                "[5] - Ir para locação \n"
+               +"[0] - Sair\n"
+               + "Digite aqui a opção: "); 
+              op = leia.nextByte();
+              leia.nextLine();
+            switch(op){
+                case 1:
+                    System.out.print("Cadastro do funcionário: \n"
+                            + "Nome: ");
+                    objLocacao.getFuncionario().setNome(leia.nextLine());
+                    System.out.print("CPF: ");
+                    objLocacao.getFuncionario().setCpf(leia.nextLong());
+                    System.out.print("Cargo: ");
+                    objLocacao.getFuncionario().setCargo(leia.next());
+                    System.out.print("Salário: ");
+                    objLocacao.getFuncionario().setSalario(leia.nextDouble());
+                    leia.nextLine();
+                break;
+                case 2:
+                    System.out.print("Cadastro do usuário: \n"
+                            + "Nome: ");
+                    objLocacao.getUsuario().setNome(leia.nextLine());
+                    System.out.print("CPF: ");
+                    objLocacao.getUsuario().setIdade(leia.nextInt());
+                    System.out.print("Username");
+                    objLocacao.getUsuario().setUserName(leia.next());
+                    leia.nextLine();
+                    System.out.print("Senha");
+                    objLocacao.getUsuario().setSenha(leia.next());
+                    leia.nextLine();
+                break;
+                case 3:
+                    System.out.print("Cadastro do livro: \n"
+                            + "Titulo: ");
+                    objLocacao.getLivro().setTitulo(leia.nextLine());
+                    System.out.print("Genero: ");
+                    objLocacao.getLivro().setGenero(leia.nextLine());
+                    System.out.print("Autor: ");
+                    objLocacao.getLivro().setAutor(leia.nextLine());
+                break;
+                case 4:
+                    do{
+                        System.out.print("Selecione o cadastro na qual o mesmo queira acessar: \n"
+                                + "1 - Cadastro do Funcionário: \n"
+                                + "2 - Cadastro do Usuário \n"
+                                + "3 - Cadastro do livro\n"
+                                + "9 - Voltar ao menu principal\n"
+                                + "Digite a opção desejada: ");
+                                op = leia.nextByte();
+                                switch(op){
+                                    case 1:
+                                        System.out.print(objLocacao.getFuncionario().toString());
+                                        break;
+                                    case 2: 
+                                        System.out.print(objLocacao.getFuncionario().toString());
+                                        break;
+                                    case 3:
+                                        break;
+                                    case 9:
+                                        break;
+                                    default: 
+                                        System.out.print("\nOpção Inválida Digite novamente!!");
+                                }
+                    }while(op != 9); 
+                break;
+                case 5:
+                    do{
+                        System.out.print("\n::::::::::::::::: Sistema de Locação ::::::::::::::::::\n" +
+                              "  Escolha uma opção abaixo\n" +
+                              "  [1] - Locar livro\n" +
+                              "  [2] - Devolver livro\n" +
+                              "  [3] - Mostrar os dados do livro locado\n" +
+                              "  [4] - Mostra os dados do livro devolvido\n" +
+                              "  [5] - Sair da locação\n" +
+                              "  Digite aqui a opção: \n");
+                        op = leia.nextByte();
+                       switch(op){
+                           case 1:
+                               leia.nextLine();
+                               System.out.print("Insira os dados do livro: \n"
+                                       + "Titulo: ");
+                               objLocacao2.getLivro().setTitulo(leia.nextLine());
+                               System.out.print("Genero: ");
+                               objLocacao2.getLivro().setGenero(leia.nextLine());
+                               System.out.print("Autor: ");
+                               objLocacao2.getLivro().setAutor(leia.nextLine());
 
-    do {
-      System.out.println("[1] - Cadastrar funcionário");
-      System.out.println("[2] - Cadastrar usuário");
-      System.out.println("[3] - Cadastrar livro");
-      System.out.println("[4] - Mostrar dados do cadastro");
-      System.out.println("[5] - Ir para locação");
-      System.out.println("[0] - Sair");
-      System.out.print("Digite aqui a opção: ");
+                             //PEDIR A DATA DE LOCAÇÃO TAMBÉM.
 
-      opcao = scanner.nextInt();
+                           break;
+                           case 2:
+                               leia.nextLine();
+                               System.out.print("Insira os dados do livro devolvido: \n"
+                                       + "Titulo: ");
+                               objLocacao3.getLivro().setTitulo(leia.nextLine());
+                               System.out.print("Genero: ");
+                               objLocacao3.getLivro().setGenero(leia.nextLine());
+                               System.out.print("Autor: ");
+                               objLocacao3.getLivro().setAutor(leia.nextLine());
+                             //PEDIR A DATA DE DEVOLUÇÃO TAMBÉM.
+                            break;
+                            case 3:
+                               System.out.print("Dados do livro locado: \n"
+                                       + objLocacao2.getLivro()+objLocacao.getDataLocacao());
+                               break;
+                            case 4:
+                               System.out.print("Dados do livro devolvido: \n"
+                                       + objLocacao3.getLivro().toString() +" Data de Locação: "+objLocacao3.getDataLocacao()+"\nData devolução: "+objLocacao3.getDataDevolucao()+"\nMulta: "+objLocacao.getValorMulta());
+                            break;
+                            case 5:
+                            break;
+                            default: 
+                                System.out.print("Opção inválida digite novamente!!!!");
+                       } 
+                    }while(op != 5);
+                break;
+                case 0:
+                break;
+                default:
+                    System.out.print("\n Opção inválida digite novamente!!"); 
+            }
 
-      switch (opcao) {
-        case 1:
-          cadastrarFuncionario(scanner);
-          break;
-        case 2:
-          cadastrarUsuario(scanner);
-          break;
-        case 3:
-          cadastrarLivro(scanner);
-          break;
-        case 4:
-          mostrarDadosDeCadastro(scanner);
-          break;
-        case 5:
-          irParaLocao();
-          break;
-        case 0:
-          System.out.println("Saindo do programa.");
-          break;
-        default:
-          System.out.println("Opção inválida. Tente novamente.");
-          break;
-      }
-    } while (opcao != 0);
-  }
+        }while(op != 0);
 
-  public static void cadastrarFuncionario(Scanner scanner) {
-    System.out.println("Digite seu nome");
-    String nome = scanner.next();
-  
-    locacao.getFuncionario().setNome(nome);
-
-    System.out.println("Digite seu cpf");
-    long cpf = scanner.nextLong();
-    System.out.println(cpf);
-
-    System.out.println("Digite seu salario");
-    double salario = scanner.nextDouble();
-    System.out.println(salario);
-
-    System.out.println("Digite seu cargo");
-    String cargo = scanner.next();
-    System.out.println(cargo);
-
-    System.out.println("Digite seu endereco");
-    String endereco = scanner.next();
-    System.out.println(endereco);
-  }
-
-  public static void cadastrarUsuario(Scanner scanner) {
-    System.out.println("Digite seu nome");
-    String nome = scanner.next();
-    System.out.println(nome);
-
-    System.out.println("Digite seu userName");
-    String userName = scanner.next();
-    System.out.println(userName);
-
-    System.out.println("Digite sua senha");
-    String senha = scanner.next();
-    System.out.println(senha);
-
-    System.out.println("Digite sua permissão");
-    String permissao = scanner.next();
-    System.out.println(permissao);
-
-    System.out.println("Digite sua idade");
-    int idade = scanner.nextInt();
-    System.out.println(idade);
-
-  }
-
-  public static void cadastrarLivro(Scanner scanner) {
-    System.out.println("Digite o  nome do livro");
-    String titulo = scanner.next();
-    System.out.println(titulo);
-
-    System.out.println("Digite o  genero do livro");
-    String genero = scanner.next();
-    System.out.println(genero);
-
-    System.out.println("Digite o  autor do livro");
-    String autor = scanner.next();
-    System.out.println(autor);
-
-  }
-
-  public static void mostrarDadosDeCadastro(Scanner scanner) {
-  }
-
-  public static void irParaLocao() {
-    int opcao;
-    Scanner scanner = new Scanner(System.in);
-    do {
-      System.out.print("::::::::::::::::: Sistema de Locação ::::::::::::::::::\n" +
-          " Escolha uma opção abaixo\n" +
-          " [1] - Locar livro\n" +
-          " [2] - Devolver livro\n" +
-          " [3] - Mostrar os dados do livro locado\n" +
-          " [4] - Mostra os dados do livro devolvido\n" +
-          " [5] - Sair da locação\n" +
-          " Digite aqui a opção: ");
-      opcao = scanner.nextInt();
-
-      switch (opcao) {
-        case 1:
-          locarLivro(scanner);
-          break;
-        case 2:
-          devolverLivro(scanner);
-          break;
-        case 3:
-          mostrarDadosDoLivroLocado();
-          break;
-        case 4:
-          mostrarDadosDoLivroDevolvido();
-          break;
-        case 5:
-          System.out.println("Saindo do programa.");
-          break;
-        default:
-          System.out.println("Opção inválida. Tente novamente.");
-          break;
-      }
-    } while (opcao != 5);
-
-    scanner.close();
-  }
-
-  public static void locarLivro(Scanner scanner) {
-    System.out.println("Digite o título do livro que você deseja locar:");
-    String titulo = scanner.next();
-    System.out.println(titulo);
-
-    System.out.println("Digite o gênero do livro que você deseja locar:");
-    String genero = scanner.next();
-    System.out.println(genero);
-
-    System.out.println("Digite o autor do livro que você deseja locar:");
-    String autor = scanner.next();
-    System.out.println(autor);
-
-    System.out.println("Digite o status do livro que você deseja locar:");
-    boolean status = scanner.nextBoolean();
-    System.out.println(status);
-
-    mostrarDadosDoLivroLocado(titulo, autor, genero, status);
-  }
-
-  public static void devolverLivro(Scanner scanner) {
-    System.out.println("Digite o título do livro que você deseja devolver:");
-    String titulo = scanner.next();
-    System.out.println(titulo);
-
-    System.out.println("Digite o gênero do livro que você deseja devolver:");
-    String genero = scanner.next();
-    System.out.println(genero);
-
-    System.out.println("Digite o autor do livro que você deseja devolver:");
-    String autor = scanner.next();
-    System.out.println(autor);
-
-    System.out.println("Digite o status do livro que você deseja devolver:");
-    boolean status = scanner.nextBoolean();
-    System.out.println(status);
-
-    mostrarDadosDoLivroDevolvido(titulo, autor, genero, status);
-  }
-
-  public static void mostrarDadosDoLivroLocado() {
-    System.out.println("Título: " + titulo);
-    System.out.println("Autor: " + autor);
-    System.out.println("Gênero: " + genero);
-    System.out.println("Status: " + status);
-  }
-
-  public static void mostrarDadosDoLivroDevolvido() {
-    System.out.println("Título: " + titulo);
-    System.out.println("Autor: " + autor);
-    System.out.println("Gênero: " + genero);
-    System.out.println("Status: " + status);
-  }
+    }
 }
-//
