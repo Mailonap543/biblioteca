@@ -1,6 +1,6 @@
-import java.util.Scanner;
+package bibliotecaProject;
 
-import biblioteca.Usuario;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -37,7 +37,7 @@ public class Main {
                 case 2:
                     System.out.print("Cadastro do usuário: \n"
                             + "Nome: ");
-                    objLocacao.getUsuario().setNome(leia.nextLine());
+                    objLocacao.getUsuario().setNome(leia.next());
                     System.out.print("CPF: ");
                     objLocacao.getUsuario().setIdade(leia.nextInt());
                     System.out.print("Username");
@@ -103,8 +103,6 @@ public class Main {
                                System.out.print("Autor: ");
                                objLocacao2.getLivro().setAutor(leia.nextLine());
 
-                             //PEDIR A DATA DE LOCAÇÃO TAMBÉM.
-
                            break;
                            case 2:
                                leia.nextLine();
@@ -115,7 +113,6 @@ public class Main {
                                objLocacao3.getLivro().setGenero(leia.nextLine());
                                System.out.print("Autor: ");
                                objLocacao3.getLivro().setAutor(leia.nextLine());
-                             //PEDIR A DATA DE DEVOLUÇÃO TAMBÉM.
                             break;
                             case 3:
                                System.out.print("Dados do livro locado: \n"
